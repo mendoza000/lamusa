@@ -1,0 +1,10 @@
+.categoriesList{
+	margin: 1.5rem 1rem;
+}
+.categoriesList_title{
+	padding-bottom: 0.5rem;
+}
+.categoriesList_list{
+	display: flex;
+	overflow-y: hidden;
+}

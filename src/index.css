@@ -1,0 +1,30 @@
+:root{
+  --color-primary-xo: #480f6e;
+  --color-primary-o: #581982;
+  --color-primary: #7027A0;
+  --color-primary-l: #833bb3;
+  --color-primary-xl: #964fc4;
+
+  --color-secondary-xo: #5041b5;
+  --color-secondary-o: #6253c9;
+  --color-secondary: #7868e6;
+  --color-secondary-l: #8f81f0;
+  --color-secondary-xl: #a499f2;
+
+  --color-bg: #25223d;
+
+  --font-title: 'Birthstone', cursive;
+  --font-text: 'Oswald', sans-serif;
+
+  --color-text: #f4f2ff;
+  --color-text-s: #25223d;
+}
+*{
+  padding: 0;
+  margin: 0;
+}
+html, body{
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-text);
+}
