@@ -12,12 +12,16 @@
   --color-secondary-xl: #a499f2;
 
   --color-bg: #25223d;
+  --color-bg-l: #363157;
 
   --font-title: 'Birthstone', cursive;
   --font-text: 'Oswald', sans-serif;
 
   --color-text: #f4f2ff;
   --color-text-s: #25223d;
+  --color-text-s-l: #4b466e;
+  --color-text-s-xl: #746f96;
+
 }
 *{
   padding: 0;
@@ -27,4 +31,20 @@ html, body{
   background-color: var(--color-bg);
   color: var(--color-text);
   font-family: var(--font-text);
+}
+#root{
+  margin-bottom: 5rem;
+}
+
+body::-webkit-scrollbar {
+    width: 3px;     /* Tamaño del scroll en vertical */
+    height: 3px;    /* Tamaño del scroll en horizontal */
+}
+body::-webkit-scrollbar-thumb {
+    background-color: #aaa;
+    border-radius: 4px;
+    transition: background-color 0.5s;
+}
+body::-webkit-scrollbar-thumb:active {
+    background-color: #888;
 }

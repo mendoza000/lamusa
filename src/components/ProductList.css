@@ -1,0 +1,22 @@
+.productList{
+	margin: 1rem;
+}
+
+.productList div:first-child{
+	display: flex;
+	justify-content: space-between;
+}
+.productList div:first-child button{
+	padding: 0 0.4rem;
+	border: none;
+	outline: none;
+	background-color: var(--color-text);
+	background-color: transparent;
+	color: var(--color-text-s-xl);
+	border-bottom: 2px dashed var(--color-text-s-xl);
+	transition: color 0.3s, border-bottom-color 0.3s;
+}
+.productList div:first-child button:focus{
+	color: var(--color-text-s-l);
+	border-bottom-color: var(--color-text-s-l);
+}
