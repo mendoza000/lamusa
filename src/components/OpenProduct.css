@@ -88,4 +88,8 @@
 	font-size: 1.1rem;
 	background-color: var(--color-primary-l);
 	color: var(--color-text);
+	transition: background-color 0.3s;
+}
+.openProduct_card_containerBtn button:focus{
+	background-color: var(--color-primary);
 }

@@ -1,10 +1,11 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import Product from './Product'
 import desayunoImg from '../assets/desayuno.png'
 import regaloUp from '../assets/regaloUp.png'
 import './ProductList.css'
 
-const ProductList = () => {
+const ProductList = ({cart, setCart}) => {
 	
 	return(
 		<div className="productList">
@@ -22,19 +23,25 @@ const ProductList = () => {
 				img={desayunoImg}
 				title={"Title of product"}
 				category={"Desayuno"}
-				price={"14.000$"}/>
+				price={"14.000$"}
+				cart={cart}
+				setCart={setCart}/>
 
 			<Product
 				img={regaloUp}
 				title={"Title of product"}
 				category={"Desayuno"}
-				price={"12.000$"}/>
+				price={"12.000$"}
+				cart={cart}
+				setCart={setCart}/>
 
 			<Product
 				img={desayunoImg}
 				title={"Title of product"}
 				category={"Desayuno"}
-				price={"16.000$"}/>
+				price={"16.000$"}
+				cart={cart}
+				setCart={setCart}/>
 
 		</div>
 	)
@@ -42,3 +49,8 @@ const ProductList = () => {
 }
 
 export default ProductList
+
+ProductList.propTypes = {
+	setCart: PropTypes.func.isRequired,
+	cart: PropTypes.array.isRequired
+}

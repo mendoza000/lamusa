@@ -8,6 +8,7 @@ import ProductList from '../components/ProductList'
 import './Home.css'
 
 const Home = () => {
+	const [cart, setCart] = useState([])
 	const PrincipalCardText = "Tu complice en momentos especiales 💜"
 
 	useEffect(() => {
@@ -50,7 +51,9 @@ const Home = () => {
 					img={PrincipalCardImg}/>
 			</div>
 			<CategoriesList />
-			<ProductList />
+			<ProductList 
+				cart={cart}
+				setCart={setCart} />
 		</>
 	)
 

@@ -3,12 +3,22 @@ import PropTypes from 'prop-types'
 import 'animate.css'
 import './OpenProduct.css'
 
-const OpenProduct = ({img, title, price, category, setViewProduct}) => {
+const OpenProduct = ({img, title, price, category, setViewProduct, cart, setCart}) => {
 	const body = document.querySelector('body');
 
 	useEffect(() => {
 		body.style.overflowY = 'hidden'
 	}, [])
+
+	const addToCart = () => {
+		setCart([...cart, {
+			title,
+			img,
+			price,
+			category
+		}])
+		console.log(cart);
+	}
 
 	const returnPage = () => {
 		const op = document.querySelector('.openProduct');
@@ -47,10 +57,10 @@ const OpenProduct = ({img, title, price, category, setViewProduct}) => {
 				<div className="openProduct_card_containerBtn">
 					<span>
 						<i className="las la-shopping-cart"></i>
-						Carrito (0)
+						Carrito ( { cart.length } )
 					</span>
-					<button>
-						<i class="las la-cart-plus"></i>
+					<button onClick={addToCart}>
+						<i className="las la-cart-plus"></i>
 						Añadir
 					</button>
 					<span>
@@ -69,5 +79,7 @@ OpenProduct.propTypes = {
 	img: PropTypes.string.isRequired,
 	title: PropTypes.string.isRequired,
 	price: PropTypes.string.isRequired,
-	category: PropTypes.string.isRequired
+	category: PropTypes.string.isRequired,
+	setCart: PropTypes.func.isRequired,
+	cart: PropTypes.array.isRequired
 }
