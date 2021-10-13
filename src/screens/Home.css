@@ -2,4 +2,7 @@
 	display: flex;
 	overflow-x: hidden;
 	scroll-behavior: smooth;
+	max-width: 20rem;
+	margin-right: auto;
+	margin-left: auto;
 }

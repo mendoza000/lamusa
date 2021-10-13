@@ -17,6 +17,7 @@ const Home = () => {
 	
 
 	const moveSlider = () => {
+		console.log("me llamaron");
 		const sliderx = document.querySelector('.slider');
 
 		setTimeout(() =>{

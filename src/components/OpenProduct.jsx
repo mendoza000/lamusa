@@ -54,6 +54,16 @@ const OpenProduct = ({img, title, price, category, setViewProduct, cart, setCart
 					alt={title}
 					className="openProduct_card_img"/>
 
+				{/*<ul>
+					<ol>Caja de madera</ol>
+					<ol>Sandwich</ol>
+					<ol>Flores</ol>
+					<ol>Globo</ol>
+					<ol>Carta</ol>
+					<ol>Mermelada de fresa</ol>
+					<ol>Chocolate</ol>
+				</ul>*/}
+
 				<div className="openProduct_card_containerBtn">
 					<span>
 						<i className="las la-shopping-cart"></i>
