@@ -3,7 +3,16 @@ import PropTypes from 'prop-types'
 import 'animate.css'
 import './OpenProduct.css'
 
-const OpenProduct = ({img, title, price, category, setViewProduct, cart, setCart}) => {
+const OpenProduct = ({
+		img, 
+		title, 
+		price, 
+		category, 
+		content, 
+		setViewProduct, 
+		cart, 
+		setCart}) => {
+
 	const body = document.querySelector('body');
 
 	useEffect(() => {
@@ -17,7 +26,6 @@ const OpenProduct = ({img, title, price, category, setViewProduct, cart, setCart
 			price,
 			category
 		}])
-		console.log(cart);
 	}
 
 	const returnPage = () => {
@@ -29,6 +37,7 @@ const OpenProduct = ({img, title, price, category, setViewProduct, cart, setCart
 			setViewProduct(false)
 		}, 550)
 	}
+
 	
 	return(
 		<div className="openProduct animate__animated animate__slideInUp animate__faster">
@@ -54,17 +63,27 @@ const OpenProduct = ({img, title, price, category, setViewProduct, cart, setCart
 					alt={title}
 					className="openProduct_card_img"/>
 
-				{/*<ul>
-					<ol>Caja de madera</ol>
-					<ol>Sandwich</ol>
-					<ol>Flores</ol>
-					<ol>Globo</ol>
-					<ol>Carta</ol>
-					<ol>Mermelada de fresa</ol>
-					<ol>Chocolate</ol>
-				</ul>*/}
+				<span 
+					className="openProduct_card_contenidoTitle"
+				>
+					<i className="las la-gift"></i>
+					Contenido
+				</span>
+				<ul 
+					className="openProduct_card_contenidoList"
+				>
+					{
+						content.map((item) =>{
+							return (<li key={item}>
+							        	<i className="las la-bolt"></i>
+										{item}
+									</li>)
+						})
+					}
+				</ul>
 
-				<div className="openProduct_card_containerBtn">
+
+				<div className="openProduct_nav">
 					<span>
 						<i className="las la-shopping-cart"></i>
 						Carrito ( { cart.length } )
@@ -78,6 +97,7 @@ const OpenProduct = ({img, title, price, category, setViewProduct, cart, setCart
 					</span>
 				</div>
 			</div>
+
 		</div>
 	)
 
@@ -91,5 +111,6 @@ OpenProduct.propTypes = {
 	price: PropTypes.string.isRequired,
 	category: PropTypes.string.isRequired,
 	setCart: PropTypes.func.isRequired,
-	cart: PropTypes.array.isRequired
+	cart: PropTypes.array.isRequired,
+	content: PropTypes.array.isRequired
 }

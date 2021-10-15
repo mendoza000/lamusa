@@ -1,61 +1,21 @@
 import React, {useState, useEffect} from 'react'
-import Nav from '../components/Nav'
-import PrincipalCard from '../components/PrincipalCard'
-import CategoriesList from '../components/CategoriesList'
-import PrincipalCardImg from '../assets/cesta.png'
-import PrincipalCardImg2 from '../assets/regaloUp.png'
-import ProductList from '../components/ProductList'
+import Slider from '../components/HomeScreen/Slider'
+import CategoriesList from '../components/HomeScreen/CategoriesList'
+import ProductList from '../components/HomeScreen/ProductList'
+import 'animate.css'
 import './Home.css'
 
 const Home = () => {
 	const [cart, setCart] = useState([])
-	const PrincipalCardText = "Tu complice en momentos especiales 💜"
-
-	useEffect(() => {
-		moveSlider()
-	}, [])
-	
-
-	const moveSlider = () => {
-		console.log("me llamaron");
-		const sliderx = document.querySelector('.slider');
-
-		setTimeout(() =>{
-			sliderx.scroll(320, 0)
-		}, 4000)
-
-		setTimeout(() => {
-			sliderx.scroll(640, 0)
-		},8000)
-
-		setTimeout(() => {
-			sliderx.scroll(0, 0)
-			moveSlider()
-		}, 12000)
-
-	}
 	
 	return(
-		<>
-			<Nav />
-			{/*<h1 className="home_title">La Musa Regalona</h1>*/}
-			<div 
-				className="slider">
-				<PrincipalCard 
-					text={PrincipalCardText}
-					img={PrincipalCardImg}/>
-				<PrincipalCard 
-					text={"Regalos hechos con amor para toda ocación 💜"}
-					img={PrincipalCardImg2}/>
-				<PrincipalCard 
-					text={"Una manera diferente de celebrar 💜"}
-					img={PrincipalCardImg}/>
-			</div>
+		<div className="animate__animated animate__fadeIn animate__faster">
+			<Slider/>
 			<CategoriesList />
 			<ProductList 
 				cart={cart}
 				setCart={setCart} />
-		</>
+		</div>
 	)
 
 }

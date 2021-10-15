@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import OpenProduct from './OpenProduct'
 import './Product.css' 
 
-const Product = ({img, title, category, price, cart, setCart}) => {
+const Product = ({img, title, category, price, cart, setCart, content}) => {
 	const [viewProduct, setViewProduct] = useState(false)
 
 	return(
@@ -33,9 +33,11 @@ const Product = ({img, title, category, price, cart, setCart}) => {
 					img={img}
 					price={price}
 					category={category}
+					content={content}
 					setViewProduct={setViewProduct}
 					cart={cart}
-					setCart={setCart} />
+					setCart={setCart}
+					/>
 			} 
 		</>
 	);
@@ -50,5 +52,6 @@ Product.propTypes = {
 	category: PropTypes.string.isRequired,
 	price: PropTypes.string.isRequired,
 	setCart: PropTypes.func.isRequired,
-	cart: PropTypes.array.isRequired
+	cart: PropTypes.array.isRequired,
+	content: PropTypes.array.isRequired
 }

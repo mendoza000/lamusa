@@ -30,6 +30,8 @@
 	border-radius: 5px;
 	font-size: 1.5rem;
 	transition: background-color 0.3s;
+	text-decoration: none;
+	color: var(--color-text);
 }
 .nav_item i{
 	padding: 0.3rem 0.7rem;
