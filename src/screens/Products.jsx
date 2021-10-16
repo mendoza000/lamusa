@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import Category from '../components/Products/Category'
 import PrincipalCard from '../components/HomeScreen/PrincipalCard'
 import img1 from '../assets/regaloUp.png'
@@ -6,6 +6,10 @@ import './Products.css'
 
 const Products = () => {
 	
+	useEffect(() => {
+		window.scroll(0,0)
+	})
+
 	return(
 		<div className="animate__animated animate__fadeIn animate__faster products_container">
 			
