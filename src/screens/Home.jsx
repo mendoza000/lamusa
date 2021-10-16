@@ -6,15 +6,11 @@ import 'animate.css'
 import './Home.css'
 
 const Home = () => {
-	const [cart, setCart] = useState([])
-	
 	return(
 		<div className="animate__animated animate__fadeIn animate__faster">
 			<Slider/>
 			<CategoriesList />
-			<ProductList 
-				cart={cart}
-				setCart={setCart} />
+			<ProductList />
 		</div>
 	)
 

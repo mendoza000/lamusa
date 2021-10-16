@@ -17,24 +17,24 @@ const CategoriesList = () => {
 						<i className="las la-bread-slice"></i>
 					}/>
 				<Category 
-					name={"Category"} 
+					name={"Fitness"} 
 					icon={
 						<i className="las la-apple-alt"></i>
 					}/>
 				<Category 
-					name={"Category"} 
+					name={"Amor"} 
 					icon={
 						<i className="lar la-heart"></i>
 					}/>
 				<Category 
-					name={"Category"} 
+					name={"Cumpleaños"} 
 					icon={
 						<i className="las la-birthday-cake"></i>
 					}/>
 				<Category 
-					name={"Category"} 
+					name={"Festivos"} 
 					icon={
-						<i className="las la-gift"></i>
+						<i className="las la-glass-cheers"></i>
 					}/>
 			</div>
 

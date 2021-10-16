@@ -1,11 +1,10 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import AppRouter from './screens/AppRouter'
+import MainApp from './screens/MainApp'
 import 'normalize.css'
 import './index.css'
 
-
 ReactDOM.render(
-    <AppRouter />,
+    <MainApp />,
   document.getElementById('root')
 )

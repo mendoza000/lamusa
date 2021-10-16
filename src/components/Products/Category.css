@@ -1,0 +1,15 @@
+.products_category_container{
+	display: flex;
+	overflow-x: scroll;
+	margin-bottom: 1rem;
+	padding-bottom: 1rem;
+}
+.products_category_title{
+	font-size: 1.5rem;
+	margin-right: 1rem;
+	margin-left: 1rem;
+}
+.products_category_title i{
+	margin-right: 0.4rem;
+	color: var(--color-secondary-xl);
+}

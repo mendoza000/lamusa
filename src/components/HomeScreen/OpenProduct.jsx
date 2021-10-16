@@ -1,5 +1,6 @@
-import React, {useEffect} from 'react'
+import React, {useEffect, useContext} from 'react'
 import PropTypes from 'prop-types'
+import {CartContext} from '../../screens/CartContext'
 import 'animate.css'
 import './OpenProduct.css'
 
@@ -9,12 +10,11 @@ const OpenProduct = ({
 		price, 
 		category, 
 		content, 
-		setViewProduct, 
-		cart, 
-		setCart}) => {
-
+		setViewProduct}) => {
 	const body = document.querySelector('body');
 	const nav  = document.querySelector('.nav');
+
+	const {cart, setCart} = useContext(CartContext)
 
 	useEffect(() => {
 		body.style.overflowY = 'hidden'
@@ -113,7 +113,6 @@ OpenProduct.propTypes = {
 	title: PropTypes.string.isRequired,
 	price: PropTypes.string.isRequired,
 	category: PropTypes.string.isRequired,
-	setCart: PropTypes.func.isRequired,
-	cart: PropTypes.array.isRequired,
-	content: PropTypes.array.isRequired
+	content: PropTypes.array.isRequired,
+	setViewProduct: PropTypes.func.isRequired
 }
