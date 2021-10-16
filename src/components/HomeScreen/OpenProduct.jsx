@@ -14,9 +14,11 @@ const OpenProduct = ({
 		setCart}) => {
 
 	const body = document.querySelector('body');
+	const nav  = document.querySelector('.nav');
 
 	useEffect(() => {
 		body.style.overflowY = 'hidden'
+		nav.style.display    = 'none'
 	}, [])
 
 	const addToCart = () => {
@@ -33,6 +35,7 @@ const OpenProduct = ({
 		op.classList.remove('animate__slideInUp')
 		op.classList.add('animate__slideOutDown')
 		body.style.overflowY = ''
+		nav.style.display    = ''
 		setTimeout(() =>{
 			setViewProduct(false)
 		}, 550)
@@ -83,6 +86,7 @@ const OpenProduct = ({
 				</ul>
 
 
+			</div>
 				<div className="openProduct_nav">
 					<span>
 						<i className="las la-shopping-cart"></i>
@@ -96,7 +100,6 @@ const OpenProduct = ({
 						{price}
 					</span>
 				</div>
-			</div>
 
 		</div>
 	)
