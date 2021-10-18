@@ -6,7 +6,7 @@
 	display: flex;
 	justify-content: space-between;
 }
-.productList div:first-child button{
+.productList div:first-child a{
 	padding: 0 0.4rem;
 	border: none;
 	outline: none;
@@ -15,6 +15,7 @@
 	color: var(--color-text-s-xl);
 	border-bottom: 2px dashed var(--color-text-s-xl);
 	transition: color 0.3s, border-bottom-color 0.3s;
+	text-decoration: none;
 }
 .productList div:first-child button:focus{
 	color: var(--color-text-s-l);

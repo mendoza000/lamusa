@@ -1,9 +1,11 @@
-import React from 'react'
+import React, {useReducer} from 'react'
 import Category from './Category'
+import {CartContext} from '../../screens/CartContext'
 import './CategoriesList.css'
 
 const CategoriesList = () => {
-	
+
+	const cats = JSON.parse(localStorage.getItem('categories'));
 	return(
 		<div className="categoriesList">
 			<h2 className="categoriesList_title">
@@ -11,31 +13,14 @@ const CategoriesList = () => {
 			</h2>
 
 			<div className="categoriesList_list">
-				<Category 
-					name={"Desayunos"} 
-					icon={
-						<i className="las la-bread-slice"></i>
-					}/>
-				<Category 
-					name={"Fitness"} 
-					icon={
-						<i className="las la-apple-alt"></i>
-					}/>
-				<Category 
-					name={"Amor"} 
-					icon={
-						<i className="lar la-heart"></i>
-					}/>
-				<Category 
-					name={"Cumpleaños"} 
-					icon={
-						<i className="las la-birthday-cake"></i>
-					}/>
-				<Category 
-					name={"Festivos"} 
-					icon={
-						<i className="las la-glass-cheers"></i>
-					}/>
+				{
+					cats?.map(({_id, name, icon}) => {
+						return <Category
+								key={_id} 
+								name={name} 
+								icon={icon}/>
+					})
+				}
 			</div>
 
 		</div>

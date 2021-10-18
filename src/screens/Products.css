@@ -5,3 +5,12 @@
 	margin-top: 1rem;
 	margin-bottom: 2rem;
 }
+.products_title{
+	text-align: center;
+	margin-bottom: 1rem;
+	border-bottom: 2px solid var(--color-primary-xl);
+	padding-bottom: 0.3rem;
+	width: 7rem;
+	margin-right: auto;
+	margin-left: auto;
+}

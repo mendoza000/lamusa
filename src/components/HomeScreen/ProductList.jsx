@@ -1,4 +1,5 @@
 import React, {useContext} from 'react'
+import {Link} from 'react-router-dom'
 import PropTypes from 'prop-types'
 import Product from './Product'
 import desayunoImg from '../../assets/desayuno.png'
@@ -17,9 +18,9 @@ const ProductList = () => {
 					Productos Principales
 				</h2>
 
-				<button>
+				<Link exact={true} to='/products' onClick={()=> window.scroll(0,0)}>
 					Ver todos...
-				</button>
+				</Link>
 			</div>
 
 			<Product

@@ -2,20 +2,23 @@ import React, {useState} from 'react'
 import OpenProduct from '../HomeScreen/OpenProduct' 
 import './Product.css'
 
-const Product = ({title, img, price, category, content}) => {
+const Product = ({title, img, price, category, content, id}) => {
 	
 	const [viewProduct, setViewProduct] = useState(false)
 
 	return(
 	    <>
 			<div 
-				className="products_category_product"
+				className="products_category_product animate__animated animate__fadeIn animate__faster"
 				onClick={() => setViewProduct(true)}
 				>
-				<img src={img} alt={title}/>
+				<div>
+					<img src={img} alt={title}/>
+					<div className="product_circle"></div>
+				</div>
 				<div>
 					<span>{title}</span>
-					<span>{price}</span>
+					<span>{price}$</span>
 				</div>
 			</div>
 
@@ -28,6 +31,7 @@ const Product = ({title, img, price, category, content}) => {
 					category={category}
 					content={content}
 					setViewProduct={setViewProduct}
+					id={id}
 					/>
 			}
 		</>

@@ -16,6 +16,7 @@ const Nav = () => {
 						exact to="/" 
 						activeClassName="nav_item-active"
 						className="nav_item"
+						onClick={()=> window.scroll(0,0)}
 						>
 						<i className="las la-home"></i>
 					</NavLink>
@@ -25,6 +26,7 @@ const Nav = () => {
 						exact to="/products" 
 						activeClassName="nav_item-active"
 						className="nav_item"
+						onClick={()=> window.scroll(0,0)}
 						>
 						<i className="las la-gift"></i>
 					</NavLink>
@@ -34,6 +36,7 @@ const Nav = () => {
 						exact to="/cart" 
 						activeClassName="nav_item-active"
 						className="nav_item"
+						onClick={()=> window.scroll(0,0)}
 						>
 						<i className="las la-shopping-cart"></i>
 					</NavLink>
@@ -43,6 +46,7 @@ const Nav = () => {
 						exact to="/about" 
 						activeClassName="nav_item-active"
 						className="nav_item"
+						onClick={()=> window.scroll(0,0)}
 						>
 						<i className="las la-comment"></i>
 					</NavLink>

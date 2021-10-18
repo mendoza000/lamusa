@@ -1,41 +1,36 @@
 import React from 'react'
 import Product from './Product'
-import pImg from '../../assets/cesta.png'
+import useGetProducts from '../../hooks/useGetProducts'
 import './Category.css'
 
-const Category = ({title,icon}) => {
+const Category = ({name,icon}) => {
 	
-	const content = ["Cesta", "Vino", "Carta", "Mermelada", "Chocolate", "Perfume"]
+	const products = JSON.parse(localStorage.getItem('products'));
 
 	return(
 		<>
 			<span className="products_category_title">
-				{icon}
-				{title}
+				<i className={icon}></i>
+				{name}
 			</span>
 			<div className="products_category_container">
 				
-				<Product 
-					title={"Title of product"}
-					price={"14.000$"}
-					img={pImg}
-					category={title}
-					content={content}
-				/>
-				<Product 
-					title={"Title of product"}
-					price={"14.000$"}
-					img={pImg}
-					category={title}
-					content={content}
-				/>
-				<Product 
-					title={"Title of product"}
-					price={"14.000$"}
-					img={pImg}
-					category={title}
-					content={content}
-				/>
+				{
+					products?.map(({category, content, description, img, price, status, title, _id}) => {
+						if (category === name && status) {
+							return <Product 
+									key={_id}
+									title={title}
+									price={price}
+									img={img}
+									category={category}
+									content={content}
+									description={description}
+									id={_id}
+									/>
+						}
+					})
+				}
 
 			</div>
 		</>

@@ -10,7 +10,8 @@ const OpenProduct = ({
 		price, 
 		category, 
 		content, 
-		setViewProduct}) => {
+		setViewProduct,
+		id}) => {
 	const body = document.querySelector('body');
 	const nav  = document.querySelector('.nav');
 
@@ -26,7 +27,8 @@ const OpenProduct = ({
 			title,
 			img,
 			price,
-			category
+			category,
+			id
 		}])
 	}
 
@@ -111,7 +113,7 @@ export default OpenProduct
 OpenProduct.propTypes = {
 	img: PropTypes.string.isRequired,
 	title: PropTypes.string.isRequired,
-	price: PropTypes.string.isRequired,
+	price: PropTypes.number.isRequired,
 	category: PropTypes.string.isRequired,
 	content: PropTypes.array.isRequired,
 	setViewProduct: PropTypes.func.isRequired
