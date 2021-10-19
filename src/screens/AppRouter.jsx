@@ -9,7 +9,7 @@ import Home from './Home'
 import About from './About'
 import Cart from './Cart'
 import Products from './Products'
-import OpenProductScreen from './OpenProductScreen'
+import {OpenProductScreen} from './OpenProductScreen'
 
 import Nav from '../components/Nav'
 const AppRouter = () => {
@@ -21,8 +21,8 @@ const AppRouter = () => {
 				<Route exact path='/' component={Home} />
 				<Route exact path='/about' component={About} />
 				<Route exact path='/cart' component={Cart} />
-				<Route exact path='/products' component={Products} />
 				<Route exact path='/products/:id' component={(props) => <OpenProductScreen {...props} />}/>
+				<Route exact path='/products' component={Products} />
 			</>
 		</Router>
 	)

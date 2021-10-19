@@ -1,28 +1,20 @@
 import React, {useContext, useState, useEffect} from 'react'
 import {Link} from 'react-router-dom'
-import Card from '../components/OpenProductScreen/Card'
+import {Card} from '../components/OpenProductScreen/Card'
 import NavAction from '../components/OpenProductScreen/NavAction'
-import {CartContext} from './CartContext'
 import './OpenProduct.css'
 
-const OpenProductScreen = ({match}) => {
-	const {cart, setCart} = useContext(CartContext)
+export const OpenProductScreen = React.memo(({match}) => {
 	const [xProd, setXProd] = useState({})
-	const [vCart, setVCart] = useState([])
 	const {id} = match.params
-
-
-	const addToCart = () => {
-		setCart(c => [...c, xProd])
-	}
 	
 	useEffect(() => {
 		const prods = localStorage.getItem('products')
 		const xProds = JSON.parse(prods);
 		const [prod] = xProds.filter(x => x._id === id)
-		
+
 		setXProd(prod)
-	}, [])
+ 	}, [])
 	
 	return(
 		<div className="openProduct animate__animated animate__fadeIn animate__faster">
@@ -45,14 +37,11 @@ const OpenProductScreen = ({match}) => {
 			
 			<NavAction 
 				price={xProd.price}
-				cart={vCart}
-				addToCart={addToCart}
+				prod={xProd}
 			/>
 
 		</div>
 	)
 
 
-}
-
-export default OpenProductScreen
+})

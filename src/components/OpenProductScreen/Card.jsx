@@ -1,7 +1,8 @@
 import React from 'react'
 
-const Card = ({category, title, img, content}) => {
-	
+export const Card = React.memo(({category, title, img, content}) => {
+		
+	console.log("Me llamaron");
 	return(
 		<div className="openProduct_card">
 			<span className="openProduct_card_category">
@@ -35,6 +36,4 @@ const Card = ({category, title, img, content}) => {
 		</div>
 	)
 
-}
-
-export default Card
+})
