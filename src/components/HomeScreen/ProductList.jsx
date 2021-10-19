@@ -1,18 +1,26 @@
-import React, {useEffect, useState} from 'react'
+import React, {useEffect, useState, useContext} from 'react'
 import {Link} from 'react-router-dom'
 import PropTypes from 'prop-types'
 import Product from './Product'
-import desayunoImg from '../../assets/desayuno.png'
-import regaloUp from '../../assets/regaloUp.png'
+import {CartContext} from '../../screens/CartContext'
 import './ProductList.css'
 
 const ProductList = () => {
 	const [top, setTop] = useState([])
+	const {setCart} = useContext(CartContext)
 
 	useEffect(() => {
 		const products = localStorage.getItem('products')
 		const prods = JSON.parse(products);
 		setTop(prods)
+	}, [])
+
+	useEffect(() => {
+		const data = localStorage.getItem('tempCart')
+		if(!data) return
+		const tempCart = JSON.parse(data);
+		setCart(tempCart)
+		localStorage.removeItem('tempCart')
 	}, [])
 	
 	return(
