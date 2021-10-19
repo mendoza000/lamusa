@@ -11,26 +11,24 @@ const OpenProductScreen = ({match}) => {
 	const [vCart, setVCart] = useState([])
 	const {id} = match.params
 
+
 	const addToCart = () => {
-		setVCart(c => [...c, xProd])
+		setCart(c => [...c, xProd])
 	}
 	
 	useEffect(() => {
 		const prods = localStorage.getItem('products')
 		const xProds = JSON.parse(prods);
 		const [prod] = xProds.filter(x => x._id === id)
-		setVCart(cart)
 		
 		setXProd(prod)
 	}, [])
-
 	
 	return(
 		<div className="openProduct animate__animated animate__fadeIn animate__faster">
 			<Link
 				to="/products"
 				className="openProduct_btnReturn"
-				onClick={() => setCart(vCart)}
 				>
 				<i className="las la-arrow-left"></i>
 			</Link>
