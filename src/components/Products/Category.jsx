@@ -1,5 +1,5 @@
 import React from 'react'
-import Product from './Product'
+import Product from '../HomeScreen/Product'
 import useGetProducts from '../../hooks/useGetProducts'
 import './Category.css'
 

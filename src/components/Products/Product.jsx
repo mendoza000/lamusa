@@ -1,40 +1,27 @@
 import React, {useState} from 'react'
-import OpenProduct from '../HomeScreen/OpenProduct' 
-import './Product.css'
+import {Link} from 'react-router-dom' 
+import '../HomeScreen/Product.css'
 
 const Product = ({title, img, price, category, content, id}) => {
-	
-	const [viewProduct, setViewProduct] = useState(false)
 
 	return(
-	    <>
-			<div 
-				className="products_category_product animate__animated animate__fadeIn animate__faster"
-				onClick={() => setViewProduct(true)}
-				>
-				<div>
-					<img src={img} alt={title}/>
-					<div className="product_circle"></div>
-				</div>
-				<div>
-					<span>{title}</span>
-					<span>{price}$</span>
-				</div>
+	    <Link 
+	    	exact="true" 
+	    	to={{
+	    		pathname: `/products/${id}`,
+	    		id: id
+	    	}}
+			className="products_category_product animate__animated animate__fadeIn animate__faster"
+			>
+			<div>
+				<img src={img} alt={title}/>
+				<div className="product_circle"></div>
 			</div>
-
-			{
-				viewProduct 
-				&& <OpenProduct 
-					title={title}
-					img={img}
-					price={price}
-					category={category}
-					content={content}
-					setViewProduct={setViewProduct}
-					id={id}
-					/>
-			}
-		</>
+			<div>
+				<span>{title}</span>
+				<span>{price}$</span>
+			</div>
+		</Link>
 	)
 
 }

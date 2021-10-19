@@ -1,4 +1,4 @@
-import React, {useContext} from 'react'
+import React, {useEffect, useState} from 'react'
 import {Link} from 'react-router-dom'
 import PropTypes from 'prop-types'
 import Product from './Product'
@@ -7,23 +7,48 @@ import regaloUp from '../../assets/regaloUp.png'
 import './ProductList.css'
 
 const ProductList = () => {
+	const [top, setTop] = useState([])
 
-	const content1 = ["Caja de madera", "Sandwich", "Flores", "Globo", "Carta", "Mermelada de fresa", "Chocolate", "Jugo de naranja"]
-	const content2 = ["Globos", "Dos copas", "Bombones", "Vino", "Cesta"]
+	useEffect(() => {
+		const products = localStorage.getItem('products')
+		const prods = JSON.parse(products);
+		setTop(prods)
+	}, [])
 	
 	return(
 		<div className="productList">
 			<div>
 				<h2 className="productList_title">
-					Productos Principales
+					Productos Nuevos
 				</h2>
 
-				<Link exact={true} to='/products' onClick={()=> window.scroll(0,0)}>
+				<Link exact="true" to='/products' onClick={()=> window.scroll(0,0)}>
 					Ver todos...
 				</Link>
 			</div>
 
-			<Product
+			{
+			top?.map((item, i) => {
+				if (top.length-4 < i) {
+					return(
+						<Product 
+						title={item.title}
+						category={item.category}
+						price={item.price}
+						img={item.img}
+						content={item.content}
+						description={item.description}
+						id={item._id}
+						key={item._id}
+						/>
+					)
+				}
+			})
+
+
+			}
+
+			{/*<Product
 				img={desayunoImg}
 				title={"Title of product"}
 				category={"Desayuno"}
@@ -45,7 +70,7 @@ const ProductList = () => {
 				category={"Desayuno"}
 				price={"16.000$"}
 				content={content1}
-				/>
+				/>*/}
 
 		</div>
 	)

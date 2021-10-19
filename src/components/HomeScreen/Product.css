@@ -3,8 +3,8 @@
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	width: 14rem;
-	min-height: 18rem;
+	min-height: 20rem;
+	max-height: 20rem;
 	margin-right: auto;
 	margin-left: auto;
 	margin-top: 1.5rem;
@@ -16,9 +16,14 @@
 	-webkit-box-shadow: 0px -0px 20px -4px rgba(0,0,0,0.6);
 	-moz-box-shadow: 0px 0px 20px -4px rgba(0,0,0,0.6);
 	border-radius: 15px;
+	text-decoration: none;
+	color: inherit;
+	min-width: 14rem;
+	max-width: 14rem;
 }
 .product img{
 	width: 100%;
+	max-height: 14rem;
 	border-top-right-radius: 15px;
 	border-top-left-radius: 15px;
 	margin-bottom: 1rem;

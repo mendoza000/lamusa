@@ -8,7 +8,9 @@ const CartList = () => {
 	return(
 		<div className="cart_list">
 		{ cart.map((item) => {
-				return <CartItem key={item.id} item={item} />
+				return <CartItem 
+						key={item.id} 
+						item={item} />
 			})}
 		</div>
 	)

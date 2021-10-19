@@ -6,7 +6,7 @@ const CartItem = ({item}) => {
 
 	const delProduct = (e) => {
 		const id = e.target.id
-		const purge = cart.filter(item => item.id !== id)
+		const purge = cart.filter(x => x._id !== id)
 		setCart(purge)
 	}
 
@@ -21,7 +21,7 @@ const CartItem = ({item}) => {
 					{item.price}
 				</span>
 
-				<button id={item.id} onClick={delProduct}>
+				<button id={item._id} onClick={delProduct}>
 					Eliminar
 				</button>
 			</div>

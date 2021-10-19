@@ -14,6 +14,8 @@
 	padding-bottom: 0.5rem;
 	max-height: 144px;
 	min-height: 144px;
+	text-decoration: none;
+	color: inherit;
 }
 .products_category_product img{
 	width: 8rem;
