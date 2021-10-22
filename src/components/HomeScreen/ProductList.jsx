@@ -35,51 +35,26 @@ const ProductList = () => {
 				</Link>
 			</div>
 
-			{
-			top?.map((item, i) => {
-				if (top.length-4 < i) {
-					return(
-						<Product 
-						title={item.title}
-						category={item.category}
-						price={item.price}
-						img={item.img}
-						content={item.content}
-						description={item.description}
-						id={item._id}
-						key={item._id}
-						/>
-					)
+			<div className="productList_list">
+				{
+				top?.map((item, i) => {
+					if (top.length-4 < i) {
+						return(
+							<Product 
+							title={item.title}
+							category={item.category}
+							price={item.price}
+							img={item.img}
+							content={item.content}
+							description={item.description}
+							id={item._id}
+							key={item._id}
+							/>
+						)
+					}
+				})
 				}
-			})
-
-
-			}
-
-			{/*<Product
-				img={desayunoImg}
-				title={"Title of product"}
-				category={"Desayuno"}
-				price={"14.000$"}
-				content={content1}
-				/>
-
-			<Product
-				img={regaloUp}
-				title={"Title of product"}
-				category={"Desayuno"}
-				price={"12.000$"}
-				content={content2}
-				/>
-
-			<Product
-				img={desayunoImg}
-				title={"Title of product"}
-				category={"Desayuno"}
-				price={"16.000$"}
-				content={content1}
-				/>*/}
-
+			</div>
 		</div>
 	)
 

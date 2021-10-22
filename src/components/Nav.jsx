@@ -19,6 +19,7 @@ const Nav = () => {
 						onClick={()=> window.scroll(0,0)}
 						>
 						<i className="las la-home"></i>
+						<span>Inicio</span>
 					</NavLink>
 				</li>
 				<li>
@@ -29,6 +30,7 @@ const Nav = () => {
 						onClick={()=> window.scroll(0,0)}
 						>
 						<i className="las la-gift"></i>
+						<span>Productos</span>
 					</NavLink>
 				</li>
 				<li>
@@ -39,6 +41,7 @@ const Nav = () => {
 						onClick={()=> window.scroll(0,0)}
 						>
 						<i className="las la-shopping-cart"></i>
+						<span>Carrito</span>
 					</NavLink>
 				</li>
 				<li>
@@ -49,6 +52,7 @@ const Nav = () => {
 						onClick={()=> window.scroll(0,0)}
 						>
 						<i className="las la-comment"></i>
+						<span>Contactanos</span>
 					</NavLink>
 				</li>
 			</ul>

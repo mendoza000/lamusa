@@ -6,3 +6,17 @@
 	margin-right: auto;
 	margin-left: auto;
 }
+@media screen and (max-width: 499px){
+	.home .header{
+		display: none !important;
+	}
+}
+
+@media screen and (min-width: 500px){
+	.home .slider {
+		display: none;
+	}
+	.home .header{
+		display: initial;
+	}
+}

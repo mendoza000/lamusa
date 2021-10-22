@@ -21,3 +21,42 @@
 	color: var(--color-text-s-l);
 	border-bottom-color: var(--color-text-s-l);
 }
+
+@media screen and (min-width: 500px) {
+	.productList_list{
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+	}
+	.productList div:first-child{
+		margin-left: 2rem;
+		margin-right: 2rem;
+	}
+}
+
+@media screen and (min-width: 750px){
+	.productList_list{
+		grid-template-columns: repeat(3, 1fr);
+	}
+}
+@media screen and (min-width: 1000px){
+	.productList_list{
+		min-width: 50rem;
+		max-width: 50rem;
+		grid-gap: 1rem;
+		margin-right: auto;
+		margin-left: auto;
+	}
+}
+
+@media screen and (min-width: 1100px){
+	.productList div:first-child{
+		margin-left: 10%;
+		margin-right: 10%;
+	}
+}
+@media screen and (min-width: 1300px){
+	.productList div:first-child{
+		margin-left: 18%;
+		margin-right: 18%;
+	}
+}

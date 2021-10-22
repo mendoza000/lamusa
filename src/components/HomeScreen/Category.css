@@ -19,3 +19,20 @@
 .category i{
 	font-size: 2.5rem;
 }
+
+@media screen and (min-width: 750px){
+	.category{
+		min-width: 6.5rem
+	}
+}
+
+@media screen and (min-width: 890px){
+	.category{
+		min-width: 8rem
+	}
+}
+@media screen and (min-width: 1000px){
+	.category{
+		min-width: 9rem
+	}
+}
