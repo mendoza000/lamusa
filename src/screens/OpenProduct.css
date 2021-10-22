@@ -125,3 +125,10 @@
 	margin-right: 0.2rem;
 	color: var(--color-secondary-xl);
 }
+.description span{
+	margin-top: 4rem;
+}
+.description p{
+	margin: 0 1rem;
+	margin-bottom: 1rem;
+}

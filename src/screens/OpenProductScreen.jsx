@@ -33,6 +33,7 @@ export const OpenProductScreen = React.memo(({match}) => {
 				content={xProd.content}
 				img={xProd.img}
 				category={xProd.category}
+				description={xProd.description}
 			/>
 			
 			<NavAction 

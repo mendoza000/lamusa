@@ -1,8 +1,7 @@
 import React from 'react'
 
-export const Card = React.memo(({category, title, img, content}) => {
+export const Card = React.memo(({category, title, img, content, description}) => {
 		
-	console.log("Me llamaron");
 	return(
 		<div className="openProduct_card">
 			<span className="openProduct_card_category">
@@ -16,6 +15,14 @@ export const Card = React.memo(({category, title, img, content}) => {
 				src={img} 
 				alt={title}
 				className="openProduct_card_img"/>
+
+			<div className="description">
+				<span className="openProduct_card_contenidoTitle">
+					<i className="las la-sticky-note"></i>
+					Descripción
+				</span>
+				<p>{description}</p>
+			</div>
 
 			<span className="openProduct_card_contenidoTitle">
 				<i className="las la-gift"></i>
