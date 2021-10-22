@@ -16,7 +16,8 @@ export const Card = React.memo(({category, title, img, content, description}) =>
 				alt={title}
 				className="openProduct_card_img"/>
 
-			<div className="description">
+			<div className="col">
+				<div className="description">
 				<span className="openProduct_card_contenidoTitle">
 					<i className="las la-sticky-note"></i>
 					Descripción
@@ -24,22 +25,25 @@ export const Card = React.memo(({category, title, img, content, description}) =>
 				<p>{description}</p>
 			</div>
 
-			<span className="openProduct_card_contenidoTitle">
-				<i className="las la-gift"></i>
-				Contenido
-			</span>
-			<ul className="openProduct_card_contenidoList">
-			{
-				content?.map((item) =>{
-					return (
-						<li key={item}>
-							<i className="las la-bolt"></i>
-							{item}
-						</li>
-					)
-				})
-			}
-			</ul>
+			<div>
+				<span className="openProduct_card_contenidoTitle">
+					<i className="las la-gift"></i>
+					Contenido
+				</span>
+				<ul className="openProduct_card_contenidoList">
+				{
+					content?.map((item) =>{
+						return (
+							<li key={item}>
+								<i className="las la-bolt"></i>
+								{item}
+							</li>
+						)
+					})
+				}
+				</ul>
+			</div>
+			</div>
 		</div>
 	)
 
