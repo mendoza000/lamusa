@@ -53,3 +53,9 @@
 	background: linear-gradient(128deg, rgba(72,15,110,1) 0%, rgba(112,39,160,1) 50%, rgba(143,129,240,1) 100%);
 	transform: rotate(180deg);
 }
+
+@media screen and (min-width: 500px){
+	.products_category_product{
+		margin: 0 !important;
+	}
+}
