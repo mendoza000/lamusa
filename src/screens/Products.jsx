@@ -1,7 +1,7 @@
 import React, {useEffect} from 'react'
 import CategoriesList from '../components/Products/CategoriesList'
 import PrincipalCard from '../components/HomeScreen/PrincipalCard'
-import img1 from '../assets/regaloUp.png'
+import Footer from '../components/Footer'
 import './Products.css'
 
 const Products = () => {
@@ -17,6 +17,8 @@ const Products = () => {
 			/>*/}
 				
 			<CategoriesList />
+
+			<Footer />
 
 		</div>
 	)

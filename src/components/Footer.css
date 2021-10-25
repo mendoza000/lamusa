@@ -1,0 +1,20 @@
+
+.footer{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 100vw;
+	margin-right: auto;
+	margin-left: auto;
+	background: linear-gradient(128deg, rgba(72,15,110,1) 0%, rgba(112,39,160,1) 50%, rgba(143,129,240,1) 100%);
+	/*background-color: var(--color-bg-l);*/
+	padding: 1.3rem 0rem;
+	margin-top: 5rem;
+}
+
+@media screen and (max-width: 499px){
+	.footer{
+		display: none;
+	}
+}
